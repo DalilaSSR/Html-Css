@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <Style>
+       
+        body {
+            font-family: 'work Sans' Arial, Helvetica, sans-serif;
+            /*
+            Medidas absolutas: cm, mm, in(polegada), px (pixel),
+             pt(ponto), pc(paica)
+
+            Medidas relativas
+            em (altura tamanho atual), ex (altura x), rem (relativo ao root),
+            vw (relativa ao tamanho da tela),vh (altura da viewport ), %
+            
+             Obs: 16px geralmente é 1em. Ou seja 2em = 32px
+
+             RECOMENDAÇÃO OFICIAL USE PX E EM 
+            */
+            font-size: 1em;
+            font-weight:bolder;
+            /* lighter Normal bold bolder */
+            
+        }
+        h1 {font-family: 'work Sans', sans-serif;
+            font-weight:bolder;
+            font-size: 3em;
+            font-style: italic; 
+
+            /* OU  simplificar assim (sempre nessa ordem)
+            shorthand : font-style -> font-weight -> font-size -> font-family ->
+             */
+            font: italic bolder 3em 'work  Sans',Sans-serif;
+    }
+        h2  {font:  bold  2em  'work sans';
+
+    }
+            
+    </Style>
+</head>
+<body">
+    <h1>Trabalhando com Fontes</h1>
+        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+         Iusto mollitia corrupti reprehenderit repudiandae 
+         obcaecati laudantium numquam temporibus esse ea, delectus molestias? Laudantium consequatur
+         quisquam doloribus rerum 
+         reprehenderit officiis doloremque totam.</P>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+         Assumenda natus distinctio inventore eum amet 
+         necessitatibus commodi iure deleniti minus enim perspiciatis
+         minima mollitia ipsum, ad corporis! Illo reprehenderit est laboriosam!</p>
+    <h2>Subtítulo do Exercício</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+         Reprehenderit commodi est dolores reiciendis deserunt sunt
+         fuga consequatur architecto expedita, ipsum esse
+         debitis cupiditate, iste possimus! Cupiditate quia ducimus
+         hic maxime.</p>
+    
+</body>
+</html>

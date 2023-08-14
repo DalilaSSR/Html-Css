@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em Html5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente  abrir este site em vários dispositivos  diferentes  ou simplesmente aumente e
+        diminua o tamanho do seu navegador.
+    </p>
+    <picture>
+        <source media="(max-width:750px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível"> 
+         <!--colocar sempre na  ordem de baixo para cima ex: "g" "m" "p" -->
+    </picture>
+    <h1>Reproduzindo  áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio src="midia/High Noon - TrackTribe.mp3" controls autoplay> 
+
+    </audio>
+
+    <!--Alguns navegadores não tem total compatibilidade com formatos de áudio,
+         inclusive com mp3 . Podemos utilizar outros formatos de arquivos: MP3 WAV OGG
+          
+         Outra maneira de adicionar outros formatos. Ex: -->
+         
+        <audio preload="metadata" autoplay controls loop>
+            <source src="midia/guanacast-33 (2).mp3" type="audio/mpeg">
+            <source src="midia/guanacast-33 (2).ogg" type="audio/ogg">
+            <source src="midia/guanacast-33 (2).wav" type="audio/wav">
+         </audio> 
+         <!--a ordem é muito importante. Se nao conseguir o primeiro audio MPEG, 
+            ele vai tentar carregar o seguinte OGG, ou   o seguinte WAV (tentar evitar   Wav,  é muito pesado)
+        -->
+        <p>Infelizmente seu navegador não consegue reproduzir áudios.
+            <ul>
+                <li>
+            <a href="midia/guanacast-33 (2).mp3"> Guanacast-33 -
+                Clique aqui para baixar o arquivo MP3 </a>
+            </li>
+            <li>
+                <a href="midia/High Noon - TrackTribe.mp3"> High Noon - 
+                Clique aqui para baixar o arquivo MP3 </a>
+            </li>
+        </ul>
+    </p>
+</body>
+</html>
