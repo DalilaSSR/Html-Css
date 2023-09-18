@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudos de iframe</title>
+    <style>
+      iframe {
+        width: 400px;
+        height: 400px; /*valendo 1º os valores dentro das CSS, 
+            2º vale configuraçao definida na iframe, 
+            E se nao tem nenhum dos dois, vale o TAMANHO PADRÃO 300 x 150*/
+
+        border: 1px solid black; /* conf.em CSS ou configura dentro da iframe no FRAMEBORDER*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Testando o uso de um iframe</h1>
+    
+
+    <p>
+      Acessando o site do
+
+      <iframe
+        src="https://www.cursoemvideo.com"
+        frameborder="0"
+        height="500"
+        scrolling="no">
+        
+        Scrolling : atributo serve para habilitar ou desabilitar a barra de
+        rolagem no elemento. (auto, yes or no)
+
+        <a href="https://www.cursoemvideo.com" 
+        target="_blank">CursoemVideo</a>
+        <!-- se por acaso não for compatível com iframe ,colocar link. 
+            Envelopar (SHIFT+CTRL+P) 'CursoemVideo'  com 'a' (âncora). 
+             -->
+      </iframe>
+      para aprender a programar.
+    </p>
+
+    <p>
+      O Site do google
+      <iframe src="https://www.google.com.br" 
+      frameborder="0">
+        <!--LINk com iframe
+        (quadro inline, na  mesma  linha)-->
+      </iframe>
+      também é muito legal.
+      <!--"A conexão com www.google.com.br foi recusada"
+          Existem alguns sites que tem proteção 
+          para que seu conteúdo não seja exibido 
+          dentro de iframes em site de terceiros.
+          -->
+    </p>
+    <p>
+      O repositório do Guanabara
+      <iframe src="https://gustavoguanabara.github.io/"
+        frameborder="0"
+        height="500"
+        width="500"
+        scrolling="yes">
+   
+        > Frameborder : é utilizado para modificar a
+         borda padrão do elemento. Podendo ser configurado em CSS (border)
+         <a href="https://gustavoguanabara.github.io/" target="_blank"></a> 
+        </iframe>
+        também é bem legal. 
+    </p>
+</html>
