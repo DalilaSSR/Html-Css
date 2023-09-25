@@ -24,9 +24,15 @@
       laboriosam.
     </p>
     <ul>
-      <li><a href="paginas-extras/pag001.html" target="frame">Primeira página</a></li>
-      <li><a href="paginas-extras/pag002.html" target="frame">Segunda página</a></li>
-      <li><a href="paginas-extras/pag003.html" target="frame">Terceira página</a></li>
+      <li>
+        <a href="paginas-extras/pag001.html" target="frame">Primeira página</a>
+      </li>
+      <li>
+        <a href="paginas-extras/pag002.html" target="frame">Segunda página</a>
+      </li>
+      <li>
+        <a href="paginas-extras/pag003.html" target="frame">Terceira página</a>
+      </li>
     </ul>
 
     <p>
@@ -34,7 +40,16 @@
       modi corporis maxime! Nemo pariatur dicta at ducimus ad, quas quidem nam
       perferendis dolore nisi neque magnam repellendus.
     </p>
-    <iframe id="tela" name="frame" src="">
+    <iframe
+      id="tela"
+      name="frame"
+      srcdoc="<h1>Escolha uma 
+        das opções acima.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque velit placeat rem ipsa veniam,
+             quaerat fuga. Vel enim itaque illo consequuntur quam ad. 
+            Sint nemo veritatis.</p>
+            <img src='imagens/ativo-11.png'>"
+    >
       <p>Infelizmente seu navegador não é compatível com isso.</p>
     </iframe>
     <p>
@@ -47,3 +62,38 @@
     </p>
   </body>
 </html>
+<!--Inicialmente, quando a nossa página primária for carregada
+o nosso iframe interativo estará vazio. Isso se deve ao fato de que 
+não especificamos nenhuma página dentro do parâmetro src dele...    Inicialmente, quando a nossa página primária for carregada, 
+
+O ideal seria que colocássemos algum conteúdo dentro dele
+ para ser exibido de forma inicial, antes que alguma página secundária seja renderizada de forma interativa.
+
+Uma das maneiras de se fazer isso é você criar um arquivo
+ separado e inserir o endereço desse arquivo no parâmetro src do iframe, funcionando como uma página padrão e inicial.
+
+Essa página inicial pode conter informações como: " Escolha
+ um das opções acima (páginas secundárias) " e alguma imagem em forma de logo.
+
+Entretanto, para um iframe interativo, também é possível
+ fazer essa "página inicial" com o parâmetro " srcdoc ". Esse parâmetro permite que adicionemos, como valor do parâmetro, especificações em HTML (h1, p, img e por aí vai). 
+
+Esse código HTML que inserirmos como valor de srcdoc será
+ renderizado no nosso iframe interativo, funcionando justamente como uma página inicial.
+
+Quando você decide usar o parâmetro srcdoc, a primeira
+coisa a se fazer é deletar o parâmetro padrão "src", e aí sim inserir o srcdoc... Substituir o src pelo srcdoc. Posteriormente insira o seu código HTML como valor de srcdoc.
+
+Exemplo:
+
+<iframe srcdoc="<h1>Escolha uma das opções acima</h1> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Nobis sapiente et atque aperiam</p> <img src='imagens\cursoemvideo-logo-branca.png'>" name="frame"><p>Infelizmente o seu navegador não é compatível com essa funcionalidade</p></iframe>
+
+Dessa maneira geramos uma página inicial de forma estática 
+para o nosso iframe sem precisar criar um arquivo separado.
+
+Entretanto, o srcdoc tem a desvantagem que só podemos
+ inserir um código básico em HTML, não dá pra fazer muita coisa além disso. Por isso a recomendação é que, caso você queira algo mais evoluído, fazer como foi dito anteriormente e criar um arquivo separado com o seu código HTML e inclusive CSS. Ao invés de criar um arquivo separado, você também pode inserir uma 
+imagem como plano de fundo, background... É uma opção.
+-->
