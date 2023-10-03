@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <style>
+      * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell;
+
+        background-color: rgb(148, 220, 172);
+      }
+      h1 {
+        font-size: 30px;
+        color: rgb(28, 92, 94);
+      }
+      p {
+        font-size: 15px;
+        color: rgb(23, 36, 36);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Teste de formulário</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+      <p>
+        <label for="inome">Nome:</label>
+        <input
+          type="text"
+          name="nome"
+          id="inome"
+          required
+          maxlength="30"
+          placeholder="Nome completo"
+          autocomplete="name"
+          required
+        />
+      </p>
+      <p>
+        <label for="imedia">Média</label>
+        <input
+          type="number"
+          name="media"
+          id="imedia"
+          min="0"
+          max="10"
+          placeholder="0 a 10"
+          step="0,1"
+          required
+        />
+        <!--Sobre step: se o step não estiver pegando, 
+          ao invés de usar step="0,5" usa o step="0.5" (troca a virgula pelo ponto) -->
+      </p>
+
+      <p>
+        <label for="imes">Período Letivo</label>
+        <input type="month" name="mes" id="imes" value="2023-10" />
+      </p>
+      <p>
+        <label for="imedia">Dia da Prova</label>
+        <input type="date" name="dia" id="idia" value="2020-07-14" />
+        <!--Nota: Utilizar o atributo "value" torna a execução
+           do atributo "placeholder" inválida. Isso ocorre porque o
+            campo já será carregado preenchido, 
+            impedindo a visualização da dica.-->
+      </p>
+      <p>
+        <label for="ihora">Horário da Prova</label>
+        <input type="time" name="hora" id="ihora" />
+      </p>
+      <p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </p>
+    </form>
+  </body>
+</html>
+<!--Nota: Não confunda o atributo "maxlength" com o "max". O atributo maxlength serve para literalmente estabelecer um tamanho máximo aceitável em quantidade de caracteres para o conteúdo de um input. Já o atributo max serve para estabelecer um valor máximo aceitável 
+  no que se refere ao valor do conteúdo propriamente dito.-->
