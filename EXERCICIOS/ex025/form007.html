@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <style>
+      body {
+        background-color: #535151;
+      }
+      h1 {
+        font-family: "open_sansregular";
+        font-weight: 30%;
+        font-size: 2em;
+        color: white;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      label,
+      select {
+        margin-top: 2px;
+        font-family: "open_sansregular";
+        font-size: 1em;
+        color: #fff;
+        padding: 0px 10px 1px 10px;
+        background: #677171;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      input,
+      textarea {
+        font-family: "open_sansregular";
+        width: 30%;
+        margin-top: 2px;
+        padding: 5px 10px 5px 10px;
+        text-align: left;
+        border: 0;
+        font-size: 1em;
+        background-color: #2d2d2d;
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+        resize: none;/*A propriedade RESIZE controla como um
+         elemento pode ser redimensionado pelo usuário clicando
+         e arrastando o canto inferior direito do elemento
+        (resize: none) ->  para evitar
+        que o usuário altere o tamanho do textarea.*/
+      }
+      [type="submit"],
+      [type="reset"] {
+        width: 10%;
+        padding: 5px 20px;
+        margin: 10px 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      [type="text"] {
+        background: #677171;
+        margin-top: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"></form>
+    <p>
+      <label for="iest">Estado</label><br />
+      <select name="estado" id="iest">
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+        <option value="" selected>---Escolha---</option>
+
+        <!-- OU
+                <optgroup label="Região Sudeste">
+
+               <option value="MG">Minas Gerais</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP" >São Paulo</option>
+
+            </optgroup>
+             
+            <optgroup label="Região Nordeste">
+
+                <option value="MA">Maranhão</option>
+                <option value="PE">Pernambuco</option>
+                <option value="RN">Rio Grande do Norte</option>
+                
+            </optgroup>
+
+        -->
+      </select>
+    </p>
+    <p>
+      <label for="iprof">Profissão</label><br />
+      <input type="text" name="prof" id="iprof" list="lstprof" />
+
+      <datalist id="lstprof">
+        <option>Administrador</option>
+        <!--pode optar deixar sem value -->
+        <option value="CONT">Contabilista</option>
+        <option value="DEV">Desenvolvedor</option>
+        <option value="PROF">Professor</option>
+      </datalist>
+    </p>
+    <p>
+      <label for="imsg">Mensagem:</label><br />
+      <textarea name="msg" id="imsg" cols="40" rows="20">
+Sua mensagem...</textarea
+      >
+    </p>
+
+    <p>
+      <input type="submit" value="Enviar" /><br />
+      <input type="reset" value="Limpar" />
+    </p>
+  </body>
+</html>
