@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Query</title>
-    <link rel="stylesheet" href="estilos/style.css" media="all">
-    <link rel="stylesheet" href="estilos/retrato.css" media=" screen and (orientation: portrait)">
-    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
-</head>
-<body>
+    <link rel="stylesheet" href="estilos/style.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="estilos/retrato.css"
+      media=" screen and (orientation: portrait)"
+    />
+    <link
+      rel="stylesheet"
+      href="estilos/paisagem.css"
+      media="screen and (orientation: landscape)"
+    />
+  </head>
+  <body>
     <h1>Mude a orientação do seu dispositivo</h1>
-    
-</body>
+  </body>
 </html>
+<!-- OBS
+    
+    a configuração media="all" vai servir para todos os dispositivos, 
+    pois algumas configurações se repetem.
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+
+MEDIA TYPES sao escritos dentro das aspas normais de media=" "
+ex: media ="screen"  tela
+    media="print"    impressora
+    media="all"      configurações gerais
+
+mas as MEDIA FEATURES são escritas dentro das aspas e dentro de (parênteses), logo após os media types.
+media="screen and (orientation: portrait)"
+
+    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
+
+Importante: media types nao tem parênteses, media features tem parênteses isoladamente, ou seja, se
+ tivermos três media features, teremos 3 entre parênteses.
+-->
